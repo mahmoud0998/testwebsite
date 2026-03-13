@@ -93,7 +93,7 @@ header {
     padding: 1rem 0;
 }
 .logo-area { display: flex; align-items: center; gap: 1rem; }
-.logo-area h2 { margin: 0; font-size: 1.8rem; color: var(--primary); }
+.logo-area h2 { margin: 0;  color: var(--primary); }
 .trust-badge {
     background: var(--trust-green);
     color: var(--trust-green-text);
@@ -333,5 +333,11 @@ footer-bottom { text-align: center; padding-top: 1.5rem; border-top: 1px solid r
 @media (max-width: 768px) {
     .logo-area img.main-logo {
         height: 55px;    /* تصغير اللوجو قليلاً ليتناسب مع شاشات الموبايل */
+    }
+}
+@media (max-width: 768px){
+
+    .font-logo {
+        font-size: 21px;
     }
 }
